@@ -1,0 +1,34 @@
+.detailsPage {
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.additional {
+  border-bottom: solid 1px black;
+}
+
+.linkDetails:hover,
+.linkDetails:focus {
+  color: rgb(220, 17, 17);
+  text-decoration: underline;
+}
+
+.btnGoBack {
+  display: block;
+  width: 70px;
+}
+
+.btnGoBack:hover {
+  color: rgb(220, 17, 17);
+  text-decoration: underline;
+}
