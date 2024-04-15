@@ -38,14 +38,11 @@ const MoviesPage = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    if (evt.target.query.value.trim() === '') {
+    const query = evt.target.query.value;
+    if (query.trim() === '') {
+      setMovies([]);
       notify();
     }
-    setSearchParams({ searchQuery });
-  };
-
-  const handleChange = evt => {
-    const query = evt.target.value;
     setSearchParams(query ? { query: query } : {});
   };
 
@@ -56,11 +53,10 @@ const MoviesPage = () => {
           className={css.input}
           type="text"
           name="query"
-          value={searchQuery}
+          defaultValue={searchQuery}
           autoComplete="off"
           autoFocus
           placeholder="Search movies"
-          onChange={handleChange}
         />
         <button type="submit">Search</button>
       </form>
